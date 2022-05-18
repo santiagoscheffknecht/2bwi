@@ -11,16 +11,44 @@ public class Bankautomat {
         System.out.println("4 Ende");
 
         Random random = new Random();
-        int randomNumber = random.nextInt(100);
-        System.out.println("Ihr Kontostand betraegt" + randomNumber + "€");
-while (){
-    if ()
+        int balance = random.nextInt(100);
+        System.out.println("Ihr Kontostand betraegt" + balance + "€");
+
+        boolean isFinished = false;
+        while (!isFinished) {
+
             Scanner scanner = new Scanner(System.in);
 
-        double selection = scanner.nextDouble();
-        System.out.println(selection);
-};
+
+            int selection1 = scanner.nextInt();
+            System.out.println(selection1);
 
 
+            if (selection1 == 1) {
+                System.out.println(balance);
+            }
+            ;
+            if (selection1 == 2) {
+                // abfrage wieviel
+                // amount
+                // balance = balance + amount
+                int amount = scanner.nextInt();
+                System.out.println(amount);
+                System.out.println(balance = balance + amount);
+
+            }
+            ;
+            if (selection1 == 3) {
+                // abfrage wieviel
+                // amount
+                // balance = balance + amount
+                int takeaway = scanner.nextInt();
+                System.out.println(takeaway);
+                System.out.println(balance=balance-takeaway);}
+            if (selection1 == 4) {isFinished = true;};
+        }
+        ;
     }
-}
+
+    ;
+};
