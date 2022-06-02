@@ -6,13 +6,18 @@ public class Wuerfel {
         System.out.println("Werfe den Wuerfel mit 1");
         Random random = new Random();
         int generateNumber = random.nextInt(30)+6;
+        int value = 0;
         boolean isFinished = false;
         while (!isFinished) {
             Scanner scanner = new Scanner(System.in);
 
-
             int selection1 = scanner.nextInt();
             System.out.println(selection1);
+            if (selection1 == 1){
+                System.out.println(
+                value = generateNumber
+                );
+            }
         };
     };
 }
