@@ -1,23 +1,42 @@
-import java.util.Scanner;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Wuerfel {
     public static void main(String[] args) {
-        System.out.println("Werfe den Wuerfel mit 1");
+        int playerscore = 0;
+        int compscore = 0;
+        int selection;
         Random random = new Random();
-        int generateNumber = random.nextInt(30)+6;
-        int value = 0;
-        boolean isFinished = false;
-        while (!isFinished) {
-            Scanner scanner = new Scanner(System.in);
+        Scanner eingabewert = new Scanner(System.in);
+        System.out.println("press 1 to play");
+        selection = eingabewert.nextInt();
+        if (selection == 1) {
 
-            int selection1 = scanner.nextInt();
-            System.out.println(selection1);
-            if (selection1 == 1){
-                System.out.println(
-                value = generateNumber
-                );
+            for (int i = 0; i < 6; i++) {
+                int randomNumber = random.nextInt(6) + 1;
+                playerscore += randomNumber;
+                System.out.println(randomNumber);
             }
-        };
-    };
+
+
+        } else {
+            System.out.println("that was not 1!");
+        }
+        System.out.println("now the computer will roll:");
+        for (int i = 0; i < 6; i++) {
+            int randomNumber = random.nextInt(6) + 1;
+            compscore += randomNumber;
+            System.out.println(randomNumber);
+        }
+        System.out.println("the computers score is: " + compscore);
+        System.out.println("Youtr score is: " + playerscore);
+        if (playerscore < compscore) {
+            System.out.println("you lost!");
+        } else if (playerscore > compscore) {
+            System.out.println("you won, good job!");
+        } else {
+            System.out.println("It's a draw!");
+        }
+
+    }
 }
