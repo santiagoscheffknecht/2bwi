@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class TestTasktwo {
+public class testastktwo {
     public static void main(String[] args) {
         boolean isFinished = false;
         while (!isFinished) {

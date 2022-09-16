@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class Wuerfel {
+public class wuerfel {
     public static void main(String[] args) {
         int playerscore = 0;
         int compscore = 0;

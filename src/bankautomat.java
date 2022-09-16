@@ -2,7 +2,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 
-public class Bankautomat {
+public class bankautomat {
     public static void main(String[] args) {
         System.out.println("Hallo du");
         System.out.println("1 Kontostand");
