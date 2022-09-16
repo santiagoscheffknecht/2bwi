@@ -18,7 +18,7 @@ public class Cäserverschlüsselung {
                 Message_Char = (char)(Message_Char - Cipher_Key);
 
                 if(Message_Char < 'a'){
-                    Message_Char = (char)(Message_Char + 'z' - 'a' + 1);
+                    Message_Char = (char)(Message_Char + 'z' - 'a' + 2);
                 }
 
                 Decrypted_Message += Message_Char;
