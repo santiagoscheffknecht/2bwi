@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class Cäserverschlüsselung {
+public class caeserverschluesselung {
     public static void main(String...s){
         String Original_Message, Decrypted_Message = "";
         int Cipher_Key;
