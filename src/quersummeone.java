@@ -10,7 +10,7 @@ public class quersummeone {
                 sum = sum + Character.getNumericValue(numbers[i]);
             }
 
-            if (sum == 15) {
+            if (cnt == 15) {
 
                 System.out.println("nummer" + cnt + "Quersumme" + sum);
             }
