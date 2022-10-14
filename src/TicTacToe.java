@@ -1,67 +1,127 @@
 import java.util.Scanner;
 import java.util.*;
 public class TicTacToe {
-    public static void main(String[] args){
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("[1][2][3]");
-        System.out.println("[3][4][5]");
-        System.out.println("[6][7][8]");
-
-        static String[] board;
-        static String turn;
-
-        static String checkWinner(){
-            for (int a = 0; a < 8; a++) {
-                String line = null;
-
-                switch (a) {
-                    case 0:
-                        line = board[0] + board[1] + board[2];
-                        break;
-                    case 1:
-                        line = board[3] + board[4] + board[5];
-                        break;
-                    case 2:
-                        line = board[6] + board[7] + board[8];
-                        break;
-                    case 3:
-                        line = board[0] + board[3] + board[6];
-                        break;
-                    case 4:
-                        line = board[1] + board[4] + board[7];
-                        break;
-                    case 5:
-                        line = board[2] + board[5] + board[8];
-                        break;
-                    case 6:
-                        line = board[0] + board[4] + board[8];
-                        break;
-                    case 7:
-                        line = board[2] + board[4] + board[6];
-                        break;
-                }
-                if (line.equals("xxx")) {
-                    return "x";
-                } else if (line.equals("OOO")) {
-                    return "OOO";
-                }
-            };
+    public static void main(String[] args) {;
+        //Feld erstellen
+        char[][] field = new char[3][3];
+        for (int i = 0; i < 3; i++) {
+            field[0][i] = '+';
+            field[1][i] = '+';
+            field[2][i] = '+';
+        }
+        for (int i = 0; i < field.length; i++) {
+            System.out.println(field[i]);};
+        System.out.println("turn x");
 
         boolean isFinished = false;
+        int round = 0;
+
         while (!isFinished) {
+        Scanner position = new Scanner(System.in);
 
+        //position suchen
+        String input = position.next();
+        String[] in = input.split("/");
+        int x = Integer.parseInt(in[0]);
+        int y = Integer.parseInt(in[1]);
+        if (round %2 == 0){
+            field[x][y] = 'x';
+        }
+        else {
+            field[x][y] = 'o';
+        }
 
+            for (int i = 0; i < field.length; i++) {
+                System.out.println(field[i]);
+            }
+        round++;
+        if (round %2 == 0){
+            System.out.println("turn x");
+        }
+        else {
+            System.out.println("turn o");
+        }
 
+        if (field[0][0] == field[1][1] && field[2][2] == field[1][1] && field[1][1] != '+') {
+            if (round %2 == 0){
+                System.out.println("o has won se game");
+            }
+            else {
+                System.out.println("x has won se game");
+            }
+            isFinished = true;
+        }
+        else if (field[0][0] == field[0][1] && field[0][2] == field[0][1] && field[0][1] != '+') {
+            if (round %2 == 0){
+                System.out.println("o has won se game");
+            }
+            else {
+                System.out.println("x has won se game");
+            isFinished = true;
+            }
+        }
+        else if (field[1][0] == field[1][1] && field[1][2] == field[1][1] && field[1][1] != '+') {
+            if (round %2 == 0){
+                System.out.println("o has won se game");
+            }
+            else {
+                System.out.println("x has won se game");
+                isFinished = true;
+            }
 
+}
+        else if (field[2][0] == field[2][1] && field[2][2] == field[2][1] && field[2][1] != '+') {
+            if (round %2 == 0){
+                System.out.println("o has won se game");
+            }
+            else {
+                System.out.println("x has won se game");
+                isFinished = true;
+            }}
+        else if (field[0][0] == field[2][0] && field[2][0] == field[1][0] && field[2][0] != '+') {
+            if (round %2 == 0){
+                System.out.println("o has won se game");
+            }
+            else {
+                System.out.println("x has won se game");
+                isFinished = true;
+            }}
+        else if (field[0][1] == field[2][1] && field[2][1] == field[1][1] && field[2][1] != '+') {
+            if (round %2 == 0){
+                System.out.println("o has won se game");
+            }
+            else {
+                System.out.println("x has won se game");
+                isFinished = true;
+            }}
+        else if (field[0][2] == field[2][2] && field[2][2] == field[1][2] && field[2][2] != '+') {
+            if (round %2 == 0){
+                System.out.println("o has won se game");
+            }
+            else {
+                System.out.println("x has won se game");
+                isFinished = true;
+            }}
+        else if (field[0][0] == field[2][0] && field[2][0] == field[1][0] && field[2][0] != '+') {
+            if (round %2 == 0){
+                System.out.println("o has won se game");
+            }
+            else {
+                System.out.println("x has won se game");
+                isFinished = true;
+            }}
+        else if (field[0][2] == field[1][1] && field[2][0] == field[1][1] && field[1][1] != '+') {
+            if (round %2 == 0){
+                System.out.println("o has won se game");
+            }
+            else {
+                System.out.println("x has won se game");
+                isFinished = true;
+            }}
+        else if (round == 9){
+            System.out.println("you both lost there is no draw");
+            isFinished = true;
 
-            int selection1 = scanner.nextInt();
+        };;
 
-
-
-
-
-
-
-    }}
-};};};
+            ;}}}
