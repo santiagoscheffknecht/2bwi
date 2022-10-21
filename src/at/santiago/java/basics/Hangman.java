@@ -2,6 +2,7 @@ package at.santiago.java.basics;
 
 import java.util.Scanner;
 import java.util.Random;
+
 public class Hangman {
     public static void main(String[] args) {
         String word = "";
@@ -10,7 +11,7 @@ public class Hangman {
 
         Random random = new Random();
         int number = random.nextInt(5);
-        switch (number){
+        switch (number) {
             case 0:
                 word = "block";
                 break;
@@ -35,24 +36,18 @@ public class Hangman {
         char[] letters = word.toCharArray();
         for (int i = 0; i < word.length(); i++) {
             int randomDescryption = random.nextInt(2);
-            if (randomDescryption == 0){
-                System.out.println(ch[i]);
+            if (randomDescryption == 0) {
+                ch[i] = '*';
             }
+            System.out.println(ch[i]);
 
-        }
+            boolean isFinished = false;
+            while (!isFinished) {
+                Scanner scanner = new Scanner(System.in);
 
-
-
-
-        boolean isFinished = false;
-        while (!isFinished) {
-
-
-            Scanner scanner = new Scanner(System.in);
-
-            System.out.println("Buchstabe:");
-            char Buchstabe = scanner.next().charAt(0);
-            System.out.println(Buchstabe);
+                System.out.println("Buchstabe:");
+                char Buchstabe = scanner.next().charAt(0);
+            }
         }
     }
 }
