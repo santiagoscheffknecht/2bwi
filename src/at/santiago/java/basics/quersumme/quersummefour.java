@@ -1,3 +1,5 @@
+package at.santiago.java.basics.quersumme;
+
 import java.util.Scanner;
 
 public class quersummefour {

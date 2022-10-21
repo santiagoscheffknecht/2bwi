@@ -1,4 +1,4 @@
-package IF;
+package at.santiago.java.basics.IF;
 
 import java.util.Random;
 

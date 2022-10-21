@@ -1,3 +1,4 @@
+package at.santiago.java.basics;
 
 import java.util.Scanner;
 

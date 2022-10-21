@@ -1,4 +1,6 @@
-public class quersummeone {
+package at.santiago.java.basics.quersumme;
+
+public class quersummetwo {
     public static void main(String[] args) {
 
         for (int cnt = 0; cnt < 1000; cnt++) {
@@ -10,7 +12,7 @@ public class quersummeone {
                 sum = sum + Character.getNumericValue(numbers[i]);
             }
 
-            if (cnt == 15) {
+            if (0 == sum % 7) {
 
                 System.out.println("nummer" + cnt + "Quersumme" + sum);
             }

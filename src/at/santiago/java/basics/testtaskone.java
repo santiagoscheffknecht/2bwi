@@ -1,3 +1,5 @@
+package at.santiago.java.basics;
+
 import java.util.Random;
 
 public class testtaskone {

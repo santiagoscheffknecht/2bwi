@@ -1,3 +1,5 @@
+package at.santiago.java.basics;
+
 import java.util.Scanner;
 
 
@@ -5,7 +7,7 @@ public class Kalender {
     public static void main(String[] args) {
         System.out.println("1.Wochentage eingeben");
         System.out.println("2.Tage des Monats eingeben");
-        System.out.println("3.Kalender erstellen mit 3");
+        System.out.println("3.at.santiago.java.basics.Kalender erstellen mit 3");
 
         boolean isFinished = false;
         while (!isFinished) {

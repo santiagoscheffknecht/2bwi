@@ -1,3 +1,5 @@
+package at.santiago.java.basics;
+
 import java.util.Scanner;
 import java.util.Random;
 public class Hangman {
@@ -10,7 +12,7 @@ public class Hangman {
         int number = random.nextInt(5);
         switch (number){
             case 0:
-                word = "block"; // test
+                word = "block";
                 break;
             case 1:
                 word = "bande";
