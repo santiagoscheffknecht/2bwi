@@ -10,7 +10,7 @@ public class Hangman {
         int number = random.nextInt(5);
         switch (number){
             case 0:
-                word = "block";
+                word = "block"; // test
                 break;
             case 1:
                 word = "bande";
