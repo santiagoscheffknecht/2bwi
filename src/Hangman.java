@@ -2,40 +2,43 @@ import java.util.Scanner;
 import java.util.Random;
 public class Hangman {
     public static void main(String[] args) {
-        String wort = "";
+        String word = "";
 
         System.out.println("Finde das wort");
 
         Random random = new Random();
-        int zahl = random.nextInt(5);
-        switch (zahl){
+        int number = random.nextInt(5);
+        switch (number){
             case 0:
-                wort = "block";
+                word = "block";
                 break;
             case 1:
-                wort = "bande";
+                word = "bande";
                 break;
             case 2:
-                wort = "strasse";
+                word = "strasse";
                 break;
             case 3:
-                wort = "viertel";
+                word = "viertel";
                 break;
             case 4:
-                wort = "dieb";
+                word = "dieb";
                 break;
             case 5:
-                wort = "sportauto";
+                word = "sportauto";
                 break;
 
         }
-        char[] ch = new char[wort.length()];
-        for (char c : ch){
-            System.out.println(c);
-        }
-        for (int i = 0; i < wort.length(); i++) {
+        char[] ch = word.toCharArray();
+        char[] letters = word.toCharArray();
+        for (int i = 0; i < word.length(); i++) {
+            int randomDescryption = random.nextInt(2);
+            if (randomDescryption == 0){
+                System.out.println(ch[i]);
+            }
 
         }
+
 
 
 
