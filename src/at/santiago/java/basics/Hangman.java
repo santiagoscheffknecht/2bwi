@@ -6,6 +6,7 @@ import java.util.Random;
 public class Hangman {
     public static void main(String[] args) {
         String word = "";
+        boolean isFinished = false;
 
         System.out.println("Finde das wort");
 
@@ -40,14 +41,16 @@ public class Hangman {
                 ch[i] = '*';
             }
             System.out.println(ch[i]);
+        }
+        while (!isFinished){
+            Scanner scanner = new Scanner(System.in);
+            String Buchstabe = scanner.next();
 
-            boolean isFinished = false;
-            while (!isFinished) {
-                Scanner scanner = new Scanner(System.in);
+            for (int i = 0; i < word.length(); i++) {
+                String tempStr = String.valueOf(ch[i]);
+                
+            }
 
-                System.out.println("Buchstabe:");
-                char Buchstabe = scanner.next().charAt(0);
             }
         }
     }
-}
