@@ -1,5 +1,6 @@
 package at.santiago.java.basics;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 import java.util.Random;
 
@@ -48,9 +49,28 @@ public class Hangman {
 
             for (int i = 0; i < word.length(); i++) {
                 String tempStr = String.valueOf(ch[i]);
-                
+                if (Buchstabe.equalsIgnoreCase(tempStr)){
+                    System.out.println(Buchstabe);
+                    char[] tmpCharArray = Buchstabe.toCharArray();
+                    ch[i] = tmpCharArray[0];
+                }else{
+                    System.out.println(ch[i]);
+                }
             }
+            int sum = 0;
+            for (int i = 0; i < word.length(); i++) {
+                if (ch[i]!='*'){
+                    sum = sum + 1;
+                }
 
+            }
+            if (sum==word.length()){
+                System.out.println("du bist strassen gangster");
+                isFinished=true;
+            }
+            else {
+                sum =0;
+            }
             }
         }
     }
