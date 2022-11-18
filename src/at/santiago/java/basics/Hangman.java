@@ -8,7 +8,7 @@ public class Hangman {
     public static void main(String[] args) {
         String word = "";
         boolean isFinished = false;
-
+        int sum = 0;
         System.out.println("Finde das wort");
 
         Random random = new Random();
@@ -43,34 +43,34 @@ public class Hangman {
             }
             System.out.println(ch[i]);
         }
-        while (!isFinished){
+        while (!isFinished) {
             Scanner scanner = new Scanner(System.in);
             String Buchstabe = scanner.next();
 
             for (int i = 0; i < word.length(); i++) {
-                String tempStr = String.valueOf(ch[i]);
-                if (Buchstabe.equalsIgnoreCase(tempStr)){
+                String tempStr = String.valueOf(letters[i]);
+                if (Buchstabe.equalsIgnoreCase(tempStr)) {
                     System.out.println(Buchstabe);
                     char[] tmpCharArray = Buchstabe.toCharArray();
                     ch[i] = tmpCharArray[0];
-                }else{
+                } else {
                     System.out.println(ch[i]);
                 }
             }
-            int sum = 0;
+
             for (int i = 0; i < word.length(); i++) {
-                if (ch[i]!='*'){
+                if (ch[i] != '*') {
                     sum = sum + 1;
                 }
 
             }
-            if (sum==word.length()){
+            if (sum == word.length()) {
                 System.out.println("du bist strassen gangster");
-                isFinished=true;
+                isFinished = true;
+            } else {
+                sum = 0;
             }
-            else {
-                sum =0;
-            }
-            }
+            System.out.println(sum);
         }
     }
+}
