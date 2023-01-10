@@ -11,9 +11,10 @@ public class Car {
     private String color;
     private String horn = "tuuut";
 
-
-
-
+    public Car(int fuelConsumption, String brand, String serialNumber)
+    {this.fuelConsumption = fuelConsumption;
+    this.brand = brand;
+    this.serialnumber = serialNumber;};
     public void drive() {
         this.fuelAmount = this.fuelAmount - fuelConsumption;
         System.out.println("I'm driving");

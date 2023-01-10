@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         int a = 7;
 
-        Car C1 = new Car();
+     /*   Car C1 = new Car();
         C1.brand = "Audi";
         C1.fuelConsumption = 7;
         C1.serialnumber = "A7";
@@ -18,6 +18,11 @@ public class Main {
         C2.fuelAmount = 69;
         C2.maxfuelAmount = 69;
 
+      */
+
+        Car C3 = new Car(17, "Babawagen", "Apocar"){
+        };
+/*
         System.out.println(C1.fuelAmount);
         System.out.println(C1.fuelAmount);
         C1.breake();
@@ -26,6 +31,7 @@ public class Main {
         C1.getRemainingRange();
         C1.drive();
         C1.getRemainingRange();
+ */
     }
 
 }
