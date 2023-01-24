@@ -1,8 +1,13 @@
 package at.santiago.java.oo.car;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Car {
     //Instanz / Gedächnissvariablen
 
     private Tank tank;
+    private List<Rearmirror> mirrors;
     private Engine engine;
     private String brand;
     private String serialnumber;
@@ -11,6 +16,7 @@ public class Car {
 
     public Car(String brand, Engine engine, String serialNumber, Tank tank)
     {
+    this.mirrors = new ArrayList<>();
     this.brand = brand;
     this.engine = engine;
     this.serialnumber = serialNumber;
@@ -52,6 +58,10 @@ public class Car {
         }
     }
 
+    public void addmirrors(Rearmirror rearmirror){
+        this.mirrors.add(rearmirror);
+    }
+
     public Tank getTank() {
         return tank;
     }
@@ -74,6 +84,10 @@ public class Car {
 
     public String getHorn() {
         return horn;
+    }
+
+    public List<Rearmirror> getMirrors() {
+        return mirrors;
     }
 }
 
