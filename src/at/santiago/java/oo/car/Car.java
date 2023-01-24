@@ -1,39 +1,43 @@
 package at.santiago.java.oo.car;
-
 public class Car {
     //Instanz / Gedächnissvariablen
 
-    private int fuelConsumption;
-    private int fuelAmount;
-    private int maxfuelAmount;
+    private Tank tank;
+    private Engine engine;
     private String brand;
     private String serialnumber;
     private String color;
     private String horn = "tuuut";
 
-    public Car(int fuelConsumption, String brand, String serialNumber, int fuelAmount, int maxfuelAmount)
-    {this.fuelConsumption = fuelConsumption;
+    public Car(String brand, Engine engine, String serialNumber, Tank tank)
+    {
     this.brand = brand;
+    this.engine = engine;
     this.serialnumber = serialNumber;
-    this.fuelAmount =  fuelAmount;
-    this.maxfuelAmount = maxfuelAmount;
+    this.tank = tank;
+
     }
 
 
     //Drive
     public void drive() {
-        this.fuelAmount = this.fuelAmount - fuelConsumption;
+        int newAmount = tank.getFuelAmount()- tank.getFuelConsumption();
+        tank.setFuelAmount(newAmount);
         System.out.println("I'm driving");
     }
 
-    //Breake
+    //How fast is the Car running
+    public void checkSpeed (){
+        System.out.println("the motor is running with " + engine.getSpeed());
+    }
+    //Breakes
     public void breake(){
         System.out.println("ich bremse");
     }
 
     //turboBoost
     public void turboBoost(){
-        if (fuelAmount>=maxfuelAmount*0.1){
+        if (tank.getFuelAmount()>=tank.getMaxfuelAmount()*0.1){
             System.out.println("SuperBoostMode");
         }
         else {
@@ -48,52 +52,20 @@ public class Car {
         }
     }
 
-    //remaining Range to drive
-    public void getRemainingRange(){
-        System.out.println(fuelAmount/fuelConsumption + " times to dirve");
+    public Tank getTank() {
+        return tank;
     }
 
-    //setter für Gedächnisinstanz
-
-
-    public void setFuelAmount(int fuelAmount) {
-        this.fuelAmount = fuelAmount;
-    }
-
-    public void setFuelConsumption(int fuelConsumption) {
-        this.fuelConsumption = fuelConsumption;
-    }
-
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public void setMaxfuelAmount(int maxfuelAmount) {
-        this.maxfuelAmount = maxfuelAmount;
-    }
-
-    public void setSerialnumber(String serialnumber) {
-        this.serialnumber = serialnumber;
-    }
-
-    public int getFuelAmount() {
-        return fuelAmount;
-    }
-    //getter für Klassen
-    public int getFuelConsumption() {
-        return fuelConsumption;
-    }
-
-    public int getMaxfuelAmount() {
-        return maxfuelAmount;
+    public Engine getEngine() {
+        return engine;
     }
 
     public String getBrand() {
         return brand;
+    }
+
+    public String getSerialnumber() {
+        return serialnumber;
     }
 
     public String getColor() {
@@ -102,10 +74,6 @@ public class Car {
 
     public String getHorn() {
         return horn;
-    }
-
-    public String getSerialnumber() {
-        return serialnumber;
     }
 }
 

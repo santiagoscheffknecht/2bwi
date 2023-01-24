@@ -1,23 +1,23 @@
 package at.santiago.java.oo.car;
 
+
 public class Main {
     public static void main(String[] args) {
         int a = 7;
+        Engine E1 = new Engine(69, 500, Engine.TYPE.DIESEL);
+        Tank T1 = new Tank(69, 8,120, Tank.TYPE.DIESEL);
 
-        Car C1 = new Car(7,"Mercedes", "CL500", 100, 150){
+        Car C1 = new Car("bmw",E1,"BigbabaBumBum", T1){
 
         };
-        Car C3 = new Car(17, "Babawagen", "Apocar", 69, 100){
+        Car C3 = new Car("Rarri",E1, "Rapcar",T1){
         };
 
-        System.out.println(C1.getFuelAmount());
-        System.out.println(C3.getBrand());
-        C1.breake();
-        C1.turboBoost();
-        C1.honk(3);
-        C1.getRemainingRange();
-        C1.drive();
-        C1.getRemainingRange();
+        C1.checkSpeed();
+        C3.drive();
+        System.out.println(C3.getTank().getFuelAmount());
+        C3.drive();
+        System.out.println(C3.getTank().getFuelAmount());
     }
 
 }
