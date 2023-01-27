@@ -7,6 +7,7 @@ public class Car {
     //Instanz / Gedächnissvariablen
 
     private Tank tank;
+    private List<HotWheel> wheels;
     private List<Rearmirror> mirrors;
     private Engine engine;
     private String brand;
@@ -16,6 +17,7 @@ public class Car {
 
     public Car(String brand, Engine engine, String serialNumber, Tank tank)
     {
+    this.wheels = new ArrayList<>();
     this.mirrors = new ArrayList<>();
     this.brand = brand;
     this.engine = engine;
@@ -62,6 +64,8 @@ public class Car {
         this.mirrors.add(rearmirror);
     }
 
+    public void addwheel(HotWheel wheel){this.wheels.add(wheel);}
+
     public Tank getTank() {
         return tank;
     }
@@ -88,6 +92,14 @@ public class Car {
 
     public List<Rearmirror> getMirrors() {
         return mirrors;
+    }
+
+    public List<HotWheel> getWheels() {
+        return wheels;
+    }
+
+    public void setWheels(List<HotWheel> wheels) {
+        this.wheels = wheels;
     }
 }
 
