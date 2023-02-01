@@ -4,9 +4,9 @@ public class Batterie {
         private double akku;
         private int brand;
 
-        public Batterie(double akku, int brand){
+        public Batterie(double akku, int serialnumber){
         this.akku = akku;
-        this.brand = brand;
+        this.brand = serialnumber;
     }
 
     public double getAkku() {
