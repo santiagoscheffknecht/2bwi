@@ -2,16 +2,22 @@ package at.santiago.java.aufgabeautos;
 
 public class Engine {
     private int maxspeed;
-    private int consumtion;
+    private double consumtion;
     private String model;
-
-
-    private Engine(int maxspeed, int consumtion, String model){
+    private Car car;
+    public Engine(int maxspeed, double consumtion, String model){
         this.consumtion = consumtion;
         this.maxspeed = maxspeed;
         this.model = model;
     }
 
+    //consumtion checken
+    public void checkconsumtion(){
+        if (car.getKm() >= 50000){
+            setConsumtion(consumtion * 1.098);
+        }
+        System.out.println("consumtion " + consumtion);
+    }
 
     public int getMaxspeed() {
         return maxspeed;
@@ -21,11 +27,11 @@ public class Engine {
         this.maxspeed = maxspeed;
     }
 
-    public int getConsumtion() {
+    public double getConsumtion() {
         return consumtion;
     }
 
-    public void setConsumtion(int consumtion) {
+    public void setConsumtion(double consumtion) {
         this.consumtion = consumtion;
     }
 

@@ -5,6 +5,7 @@ public class Car {
     private Engine engine;
     private Seller seller;
     private double cost;
+    private double km = 0;
 
 
 
@@ -21,9 +22,13 @@ public class Car {
     }
 
     //drive
-    public  void drive(){
 
+    public  void drive(){
+    km += 1000;
+        System.out.println(km + " km wurden gefahren");
     }
+
+
 
     public String getColor() {
         return color;
@@ -56,4 +61,13 @@ public class Car {
     public void setCost(double cost) {
         this.cost = cost;
     }
+
+    public double getKm() {
+        return km;
+    }
+
+    public void setKm(double km) {
+        this.km = km;
+    }
+
 }
