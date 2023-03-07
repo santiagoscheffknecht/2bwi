@@ -1,23 +1,38 @@
 package at.santiago.java.tasklight;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Candle {
-    private ArrayList glowelement;
+
+    private List<Glowelement> glowelement;
     private int slot;
     int x = slot;
 
-    private Candle(int slot){
+    public Candle(int slot){
         this.glowelement = new ArrayList();
         this.slot = slot;
     }
     public void addglowelemnt(Glowelement glowelement){this.glowelement.add(glowelement);}
 
-    public ArrayList getGlowelement() {
+    public void turnALLon(){
+        for (int i = 0; i < glowelement.size(); i++) {
+            glowelement.get(i).setStatutus(1);
+        }
+        System.out.println("all glowelements are on");
+    }
+
+    public void getOverallPowerUsage(){
+        for (int r = 0; r < glowelement.size(); r++) {
+            double usedEnegie = glowelement.get(r).getEnergieconsumption() * glowelement.size();
+            System.out.println(usedEnegie);
+        }
+    }
+    public List<Glowelement> getGlowelement() {
         return glowelement;
     }
 
-    public void setGlowelement(ArrayList glowelement) {
+    public void setGlowelement(List<Glowelement> glowelement) {
         this.glowelement = glowelement;
     }
 
