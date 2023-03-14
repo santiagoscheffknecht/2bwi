@@ -31,4 +31,8 @@ public class Glowelement {
     public double getEnergieconsumption() {
         return energieconsumption;
     }
+
+    public String getName() {
+        return name;
+    }
 }

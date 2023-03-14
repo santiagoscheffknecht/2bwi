@@ -24,10 +24,17 @@ public class Candle {
 
     public void getOverallPowerUsage(){
         for (int r = 0; r < glowelement.size(); r++) {
-            double usedEnegie = glowelement.get(r).getEnergieconsumption() * glowelement.size();
-            System.out.println(usedEnegie);
+            double gonsumption = glowelement.get(r).getEnergieconsumption();
+            System.out.println("the consumption from " + glowelement.get(r).getName() + " is " + gonsumption);
         }
     }
+
+    public void printNamesOfLightElements(){
+        for (int penis = 0; penis < glowelement.size(); penis++) {
+            System.out.println("the name of the glowelement is " + glowelement.get(penis).getName());
+        }
+    }
+
     public List<Glowelement> getGlowelement() {
         return glowelement;
     }

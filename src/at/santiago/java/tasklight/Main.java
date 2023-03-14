@@ -18,6 +18,7 @@ public class Main {
         c1.turnALLon();
         System.out.println(g1.getStatutus());
         c1.getOverallPowerUsage();
+        c1.printNamesOfLightElements();
     }
 
 };
