@@ -1,14 +1,14 @@
 package at.santiago.java.konto;
 
-public class sparbuch {
+public class Kreditkonto extends Basekonto {
     private double ammount;
-    private double multiplikator;
     private String name;
+    private double zinssatz;
 
-    public sparbuch(double ammount, double multiplikator, String name){
+    public Kreditkonto(double ammount, double zinssatz , String name){
         this.ammount = ammount;
-        this.multiplikator = multiplikator;
         this.name = name;
+        this.zinssatz = zinssatz;
     }
 
     public double getAmmount() {
@@ -19,19 +19,19 @@ public class sparbuch {
         this.ammount = ammount;
     }
 
-    public double getMultiplikator() {
-        return multiplikator;
-    }
-
-    public void setMultiplikator(double multiplikator) {
-        this.multiplikator = multiplikator;
-    }
-
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public double getZinssatz() {
+        return zinssatz;
+    }
+
+    public void setZinssatz(double zinssatz) {
+        this.zinssatz = zinssatz;
     }
 }
