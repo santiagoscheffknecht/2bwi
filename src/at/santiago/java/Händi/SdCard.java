@@ -4,16 +4,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SdCard {
+    private Cam cam;
     private int saveplace;
-    private int standardsaveplace;
+
     private List<Phonefile> file;
 
 
-    public SdCard(int saveplace, int standardsaveplace){
+    public SdCard(int saveplace){
         this.saveplace = saveplace;
-        this.standardsaveplace = standardsaveplace;
+
         this.file = new ArrayList<>();
     };
+    public void addPhonefile(Phonefile phonefile){
+        this.file.add(phonefile);
+    }
+
+    public void savepicture(){
+
+    }
 
 
 
@@ -26,11 +34,5 @@ public class SdCard {
         this.saveplace = saveplace;
     }
 
-    public int getStandardsaveplace() {
-        return standardsaveplace;
-    }
 
-    public void setStandardsaveplace(int standardsaveplace) {
-        this.standardsaveplace = standardsaveplace;
-    }
 }
