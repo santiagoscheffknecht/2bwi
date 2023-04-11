@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Cam {
     private String camname;
-
+    SdCard sdCard;
     private double mp;
 
     //Datum in java übernehmen
@@ -17,16 +17,16 @@ public class Cam {
     String Filename = dateFormat.format(date);
 
     public Cam(String camname, double mp) {
-
         this.camname = camname;
         this.mp = mp;
     }
 
 
-
     public Phonefile generatejpg() {
         Phonefile file = new Phonefile(mp * 0.6, ".jpg", Filename);
         return file;
+
+
     }
 
 
@@ -39,7 +39,6 @@ public class Cam {
     }
 
 
-
     public double getMp() {
         return mp;
     }
@@ -48,5 +47,27 @@ public class Cam {
         this.mp = mp;
     }
 
+    public DateFormat getDateFormat() {
+        return dateFormat;
+    }
 
+    public void setDateFormat(DateFormat dateFormat) {
+        this.dateFormat = dateFormat;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public String getFilename() {
+        return Filename;
+    }
+
+    public void setFilename(String filename) {
+        Filename = filename;
+    }
 }

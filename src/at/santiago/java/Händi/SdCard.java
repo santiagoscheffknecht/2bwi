@@ -6,25 +6,35 @@ import java.util.List;
 public class SdCard {
     private Cam cam;
     private int saveplace;
+    private List<Phonefile> files;
 
-    private List<Phonefile> file;
 
-
-    public SdCard(int saveplace){
+    public SdCard(int saveplace) {
         this.saveplace = saveplace;
 
-        this.file = new ArrayList<>();
-    };
-    public void addPhonefile(Phonefile phonefile){
-        this.file.add(phonefile);
+        this.files = new ArrayList<>();
     }
 
-    public void savepicture(){
+    ;
 
+    public void savefile() {
+        if (saveplace - files.get(files.size()).getMb() > 0) {
+            setSaveplace(saveplace - files.size());
+        } else {
+            System.out.println("der speicher muss bereinigt werden");
+        }
     }
 
+    public void addPhonefile(Phonefile phonefile) {
+        this.files.add(phonefile);
+    }
 
-
+    public void printFileNames(){
+        System.out.println("------------ file names --------------");
+        for (Phonefile file:this.files) {
+            System.out.println(file.getName() + file.getExtention() + file.getExtention());
+        }
+    }
 
     public int getSaveplace() {
         return saveplace;
@@ -34,5 +44,30 @@ public class SdCard {
         this.saveplace = saveplace;
     }
 
+    public void deletesplace(String name) {
+        for (int i = 0; i < files.size(); i++) {
+            if (files.get(i).getName().equalsIgnoreCase(name)) {
+                files.remove(files.get(i));
+            } else {
+                System.out.println("keine Datei gefunden");
+            }
+        }
+    }
 
+
+    public Cam getCam() {
+        return cam;
+    }
+
+    public void setCam(Cam cam) {
+        this.cam = cam;
+    }
+
+    public List<Phonefile> getFiles() {
+        return files;
+    }
+
+    public void setFiles(List<Phonefile> files) {
+        this.files = files;
+    }
 }

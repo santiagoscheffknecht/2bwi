@@ -7,7 +7,7 @@ public class Phonefile {
     private String name;
 
 
-    public Phonefile(double mb, String extention, String name){
+    public Phonefile(double mb, String extention, String name) {
         this.extention = extention;
         this.name = name;
         this.mb = mb;
@@ -36,4 +36,5 @@ public class Phonefile {
     public void setName(String name) {
         this.name = name;
     }
+
 }
